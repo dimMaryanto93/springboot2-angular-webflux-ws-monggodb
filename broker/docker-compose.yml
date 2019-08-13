@@ -1,0 +1,18 @@
+version: '3.7'
+services:
+  reactivedb:
+    image: mongo:3.4-xenial
+    networks:
+      - ws-networks
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: chat_app
+      MONGO_INITDB_ROOT_PASSWORD: chat_app
+    volumes:
+      - monggo-data-store:/data/db
+networks:
+  ws-networks:
+volumes:
+  monggo-data-store:

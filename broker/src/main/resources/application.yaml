@@ -1,0 +1,12 @@
+spring:
+  data:
+    mongodb:
+      host: ${MONGODB_HOST:localhost}
+      username: ${MONGODB_USERNAME:chat_app}
+      password: ${MONGODB_PASSWORD:chat_app}
+      database: ${MONGODB_DBNAME:admin}
+      port: ${MONGODB_PORT:27017}
+  application:
+    name: webflux-chat-engine
+server:
+  port: 9090
